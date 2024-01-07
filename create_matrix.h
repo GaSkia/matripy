@@ -1,19 +1,19 @@
 #ifndef CREATE_MATRIX_H
 #define CREATE_MATRIX_H
 
-typedef enum{
-	int n,m;
-}m_size;
+typedef struct{
+	unsigned long n,m;
+}MatrixSize;
 
 typedef struct{
-	m_size size;
+	MatrixSize size;
 	float **matrix;
-}matrix;
+}Matrix;
 
-void define_matrix()
+void define_matrix(unsigned long n, unsigned long m, MatrixSize &mSize)
 
 int create_matrix(int n, int m);
 
 void fill_matrix();
 
-
+void print_matrix();
